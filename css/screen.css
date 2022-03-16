@@ -5,13 +5,21 @@
 */
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
-  font-family: 'Helvetica neue', Arial, Helvetica, sans-serif;
-  color: #111;
+  font-family: 'Droid Serif', 'Helvetica neue', Arial, Helvetica, sans-serif;
+  color: #5c6366;
   padding: 24px 24px 0;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
-
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -20,13 +28,15 @@ html {
  */
 
 ::-moz-selection {
-  color: aqua;
-  background: #000;
+  background: #00a1e6;
+  color: white;
+  text-shadow: none;
 }
 
 ::selection {
-  color: aqua;
-  background: #000;
+  background: #00a1e6;
+  color: white;
+  text-shadow: none;
 }
 
 body {
@@ -119,18 +129,19 @@ hr {
 
 a {
   color: royalblue;
-  transition: all 5s ease-in-out;
-}
-
-a:hover,
-a:focus {
-  color: crimson;
+  transition: all 0.1s ease-in-out;
 }
 
 a:visited,
 a:active {
   color: blueviolet;
 }
+a:hover,
+a:focus {
+  /* transition: all 1s ease-in-out; */
+  color: crimson;
+}
+
 /*
     Media Queries
     ---
